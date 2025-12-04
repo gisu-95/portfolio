@@ -4,168 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>기수행님 포트폴리오</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      transition: 0.3s;
-    }
-    :root {
-      --bg: #f5f5f5;
-      --text: #222;
-      --card: #ffffff;
-      --nav: #222;
-      --header: #111;
-    }
-    .dark {
-      --bg: #121212;
-      --text: #e0e0e0;
-      --card: #1e1e1e;
-      --nav: #000;
-      --header: #000;
-    }
-    header {
-      background: var(--header);
-      color: #fff;
-      padding: 60px 20px;
-      text-align: center;
-      position: relative;
-    }
-    nav {
-      background: var(--nav);
-      padding: 12px 20px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 18px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .toggle-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      cursor: pointer;
-      font-size: 22px;
-      color: #fff;
-    }
-    section {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 20px;
-      background: var(--card);
-      border-radius: 12px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
-      animation: fadeIn 0.7s ease;
-    }
-    @keyframes fadeIn { from {opacity:0; transform: translateY(20px);} to {opacity:1;} }
-
-    #projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    .project {
-      background: var(--card);
-      border: 1px solid #3333;
-      padding: 20px;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 18px rgba(0,0,0,0.25);
-    }
-    .project h3 {
-      margin-top: 0;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    footer {
-      text-align: center;
-      padding: 25px;
-      margin-top: 60px;
-      background: var(--header);
-      color: #fff;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header>
-    <i class="fas fa-moon toggle-btn" onclick="toggleDark()"></i>
-    <h1>김기수(기수행님) 포트폴리오</h1>
-    <p>보안관제 · 네트워크 엔지니어 · 인프라 & 보안 아키텍처</p>
+  <!-- 헤더 -->
+  <header class="header">
+    <div class="logo">KISU PORTFOLIO</div>
+    <nav>
+      <a href="#about">소개</a>
+      <a href="#skills">기술 스택</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#contact">연락처</a>
+    </nav>
+    <button class="dark-toggle" id="darkToggle">🌙</button>
   </header>
 
-  <nav>
-    <a href="#about">소개</a>
-    <a href="#skills">기술 스택</a>
-    <a href="#projects">프로젝트</a>
-    <a href="#contact">연락처</a>
-  </nav>
+  <!-- 메인 Hero Section -->
+  <section class="hero fade">
+    <h1 class="title">김기수 (기수행님)</h1>
+    <p class="subtitle">보안관제 · 네트워크 엔지니어 · 인프라 아키텍처</p>
+  </section>
 
-  <section id="about">
+  <!-- 소개 -->
+  <section id="about" class="section fade">
     <h2>소개</h2>
     <p>
-      실전 기반 보안·인프라 문제 해결 능력을 바탕으로 안정적인 네트워크/보안 구조를 설계하고
-      공격·이상행위를 분석하며 대응할 수 있는 기술을 갖추고 있습니다.
-      DMZ, NAT, VLAN, VRRP, UTM, 모의해킹 등 다양한 환경에서 실습 중심 경험을 보유했습니다.
+      안정적인 시스템 운영과 보안을 위해 네트워크·인프라·보안기술을 실전 형태로 다뤄온 엔지니어입니다.
+      DMZ, NAT, VLAN, UTM, 모의해킹 등 다양한 환경에서 문제를 해결해본 경험을 강점으로 합니다.
     </p>
   </section>
 
-  <section id="skills">
+  <!-- 기술 스택 -->
+  <section id="skills" class="section fade">
     <h2>기술 스택</h2>
     <ul>
-      <li><i class="fa-solid fa-network-wired"></i> Network: VLAN, STP, HSRP/VRRP, NAT, VPN, L4, OSPF/EIGRP</li>
-      <li><i class="fa-solid fa-shield-halved"></i> Security: SIEM, IDS/IPS, WAF(mod_security), 모의해킹</li>
-      <li><i class="fa-solid fa-server"></i> Server: Rocky Linux, Apache, MariaDB, BIND, VMware</li>
-      <li><i class="fa-solid fa-code"></i> Dev: PHP, HTML/CSS, JS, SQL</li>
-      <li><i class="fa-solid fa-magnifying-glass"></i> Tools: Wireshark, BurpSuite, sqlmap, nmap</li>
+      <li>Network — VLAN, NAT, VPN, VRRP, OSPF/EIGRP, L4 스위치</li>
+      <li>Security — SIEM, IDS/IPS, WAF(mod_security), 모의해킹</li>
+      <li>Server — Rocky Linux, Apache, MariaDB, BIND</li>
+      <li>Tools — Wireshark, BurpSuite, sqlmap, nmap</li>
     </ul>
   </section>
 
-  <section id="projects">
+  <!-- 프로젝트 -->
+  <section id="projects" class="section fade">
     <h2>프로젝트</h2>
-    <div id="projects-grid">
-      <div class="project">
-        <h3><i class="fa-solid fa-database"></i> 밥세권 인프라 & 보안 재구축</h3>
-        <p>DMZ/내부망/지사망 설계, NAT·VRRP 고가용성, UTM 정책 설계, DB 보안설정, 모의해킹 및 개선.</p>
-      </div>
 
-      <div class="project">
-        <h3><i class="fa-solid fa-headset"></i> 지사 고객센터 웹 서비스 구축</h3>
-        <p>PHP/MariaDB 기반 로그인·게시판·문의·결제 기능. XSS·SQLi·IDOR 등 취약점 테스트 및 보완.</p>
-      </div>
-
-      <div class="project">
-        <h3><i class="fa-solid fa-chart-line"></i> 보안관제 분석 포트폴리오</h3>
-        <p>SIEM 이벤트 분석, DDoS/ACK Flood 패킷 분석, 침해사고 보고서 기반 분석 문서화.</p>
-      </div>
+    <div id="projectList" class="project-grid">
+      <!-- GitHub API로 자동 채워짐 -->
     </div>
   </section>
 
-  <section id="contact">
+  <!-- 연락처 -->
+  <section id="contact" class="section fade">
     <h2>연락처</h2>
-    <p><i class="fa-solid fa-envelope"></i> Email: example@example.com</p>
-    <p>GitHub / Blog / Notion 링크 삽입 가능</p>
+    <p>Email: example@example.com</p>
   </section>
 
   <footer>
     © 2025 기수행님 포트폴리오
   </footer>
 
-  <script>
-    function toggleDark() {
-      document.body.classList.toggle('dark');
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
