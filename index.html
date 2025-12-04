@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>기수행님 포트폴리오</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    nav {
+      background: #222;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-top: 0;
+    }
+    .project {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      background: #111;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>김기수(기수행님) 포트폴리오</h1>
+    <p>보안관제 · 네트워크 엔지니어 · 인프라 & 보안 아키텍처</p>
+  </header>
+
+  <nav>
+    <a href="#about">소개</a>
+    <a href="#skills">기술 스택</a>
+    <a href="#projects">프로젝트</a>
+    <a href="#contact">연락처</a>
+  </nav>
+
+  <section id="about">
+    <h2>소개</h2>
+    <p>
+      인프라·네트워크·보안 기반의 프로젝트 경험을 바탕으로 안정적 운영과
+      실전형 보안 사고 대응 역량을 보유하고 있습니다. DMZ 설계, NAT, VLAN,
+      UTM, SIEM, 모의해킹 등 다양한 환경에서 기술적 문제를 해결해온 경험이
+      강점입니다.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>기술 스택</h2>
+    <ul>
+      <li>Network: VLAN, STP, HSRP/VRRP, NAT, VPN, L4, 라우팅(OSPF/EIGRP)</li>
+      <li>Security: SIEM, IDS/IPS, WAF(mod_security), 취약점 분석·모의해킹</li>
+      <li>Server: Rocky Linux, Apache, MariaDB, BIND, NAS, VMware</li>
+      <li>Development: PHP, HTML/CSS, JavaScript, SQL</li>
+      <li>Tools: Wireshark, BurpSuite, sqlmap, nmap</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>프로젝트</h2>
+
+    <div class="project">
+      <h3>밥세권 인프라 & 보안 재구축 프로젝트</h3>
+      <p>
+        DMZ·내부망·지사망 네트워크 설계, NAT/VRRP 기반 고가용성 구성,
+        UTM 정책(IPS/WAF/Firewall) 설계, DB 보안 설정, 개인정보 보호 체계 구성,
+        웹 취약점 모의해킹 및 개선.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>지사 고객센터 웹 서비스 구축 (PHP/MariaDB)</h3>
+      <p>
+        로그인/게시판/문의/결제 기능, XSS/SQLi/IDOR 보안 테스트, 취약한 버전과
+        보안 강화 버전 비교 시나리오 작성.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>보안관제 분석 포트폴리오</h3>
+      <p>
+        DDoS 패킷 분석, ACK Flood 구분, SIEM 이벤트 분석 흐름, 침해사고 대응
+        보고서 형식 기반 문서화.
+      </p>
+    </div>
+
+  </section>
+
+  <section id="contact">
+    <h2>연락처</h2>
+    <p>Email: example@example.com</p>
+    <p>GitHub / Blog / Notion 링크 삽입 가능</p>
+  </section>
+
+  <footer>
+    © 2025 기수행님 포트폴리오
+  </footer>
+
+</body>
+</html>
